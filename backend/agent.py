@@ -159,7 +159,7 @@ async def run_agent_stream(message: str, chat_history: list, queue: asyncio.Queu
 
 # ── Chart path extraction ─────────────────────────────────────────────────────
 
-CHART_DIR = Path(r"C:\Users\priti\OneDrive\Desktop\agent_analytics\chart_outputs")
+CHART_DIR = Path(r"C:\Users\sarthak\OneDrive\Desktop\agent_analytics\chart_outputs")
 
 
 def extract_chart_paths(text: str) -> list[str]:
@@ -190,8 +190,8 @@ def extract_chart_paths(text: str) -> list[str]:
 def resolve_chart_filenames(chart_paths: list[str]) -> list[str]:
     """Return filenames of charts that actually exist on disk, copying from Plotly dir if needed."""
     filenames = []
-    plotly_dir = Path(r"C:\Users\priti\OneDrive\Desktop\plotlyserver")
-    agent_analytics_dir = Path(r"C:\Users\priti\OneDrive\Desktop\agent_analytics")
+    plotly_dir = Path(r"C:\Users\sarthak\OneDrive\Desktop\plotlyserver")
+    agent_analytics_dir = Path(r"C:\Users\sarthak\OneDrive\Desktop\agent_analytics")
 
     for cp in chart_paths:
         p = Path(cp)
