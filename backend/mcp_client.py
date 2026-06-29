@@ -18,8 +18,8 @@ logger = logging.getLogger(__name__)
 
 # ── Server configurations ──────────────────────────────────────────────────────
 
-AGENT_ANALYTICS_DIR = Path(r"C:\Users\priti\OneDrive\Desktop\agent_analytics")
-PLOTLY_DIR          = Path(r"C:\Users\priti\OneDrive\Desktop\plotlyserver")
+AGENT_ANALYTICS_DIR = Path(r"C:\Users\sarthak\OneDrive\Desktop\agent_analytics")
+PLOTLY_DIR          = Path(r"C:\Users\sarthak\OneDrive\Desktop\plotlyserver")
 
 # Python executables inside each project's venv
 ANALYTICS_PYTHON = str(AGENT_ANALYTICS_DIR / "venv" / "Scripts" / "python.exe")
