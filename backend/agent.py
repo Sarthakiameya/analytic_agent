@@ -167,13 +167,13 @@ def extract_chart_paths(text: str) -> list[str]:
     paths = []
 
     # Pattern 1: explicit CHART_PATH: marker
-    for m in re.finditer(r"CHART_PATH:\s*(.+?)(?:\n|$)", text):
+    for m in re.finditer(r"CHART_PATH:", text):
         p = m.group(1).strip().strip('"\'')
         if p and p not in paths:
             paths.append(p)
 
     # Pattern 2: file_path in JSON output
-    for m in re.finditer(r'"file_path"\s*:\s*"([^"]+\.html)"', text):
+    for m in re.finditer(r'"file_path")"', text):
         p = m.group(1).strip()
         if p and p not in paths:
             paths.append(p)
@@ -190,8 +190,8 @@ def extract_chart_paths(text: str) -> list[str]:
 def resolve_chart_filenames(chart_paths: list[str]) -> list[str]:
     """Return filenames of charts that actually exist on disk, copying from Plotly dir if needed."""
     filenames = []
-    plotly_dir = Path(r"C:\Users\sarthak\OneDrive\Desktop\plotlyserver")
-    agent_analytics_dir = Path(r"C:\Users\sarthak\OneDrive\Desktop\agent_analytics")
+    plotly_dir = Path(r"")
+    agent_analytics_dir = Path(r"")
 
     for cp in chart_paths:
         p = Path(cp)
