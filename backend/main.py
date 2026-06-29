@@ -17,7 +17,7 @@ if _root_env.exists():
     load_dotenv(_root_env, override=True)
 
 # Load agent_analytics .env (DB credentials)
-_analytics_env = Path(r"C:\Users\priti\OneDrive\Desktop\agent_analytics\.env")
+_analytics_env = Path(r"C:\Users\ \OneDrive\Desktop\agent_analytics\.env")
 if _analytics_env.exists():
     load_dotenv(_analytics_env, override=False)
 
@@ -51,7 +51,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-CHART_DIR = Path(r"C:\Users\priti\OneDrive\Desktop\agent_analytics\chart_outputs")
+CHART_DIR = Path(r"C:\Users\ \OneDrive\Desktop\agent_analytics\chart_outputs")
 CHART_DIR.mkdir(parents=True, exist_ok=True)
 app.mount("/charts", StaticFiles(directory=str(CHART_DIR)), name="charts")
 
