@@ -2,7 +2,7 @@ import json
 import os
 from pathlib import Path
 
-SKILL_DIR = Path(r"C:\Users\priti\OneDrive\Desktop\agent_analytics\.antigravity\skills\visualization")
+SKILL_DIR = Path(r"C:\Users\sarthak\OneDrive\Desktop\agent_analytics\.antigravity\skills\visualization")
 SKILL_MD   = SKILL_DIR / "SKILL.md"
 META_JSON  = SKILL_DIR / "metadata.json"
 
@@ -54,7 +54,7 @@ def load_system_prompt() -> str:
             )
 
     # ── Chart output path reminder ────────────────────────────────────────────
-    chart_path = r"C:\Users\priti\OneDrive\Desktop\agent_analytics\chart_outputs"
+    chart_path = r"C:\Users\sarthak\OneDrive\Desktop\agent_analytics\chart_outputs"
     parts.append(
         f"\n\n# CHART OUTPUT DIRECTORY\n\n"
         f"All charts must be saved to: {chart_path}\n"
